@@ -1,0 +1,8 @@
+0.02 2013-09-21
+ - Add Test::NoWarnings to tests.
+ - Add LICENSE file.
+ - Add SIGNATURE file.
+ - Rewrite Changes file to CPAN::Changes::SPEC format.
+
+0.01 2012-08-03
+ - First version.

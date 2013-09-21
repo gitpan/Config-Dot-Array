@@ -8,6 +8,7 @@ build_requires:
   ExtUtils::MakeMaker: 6.36
   File::Object: 0.05
   Test::More: 0
+  Test::NoWarnings: 0
   Test::Pod: 0
   Test::Pod::Coverage: 0
 configure_requires:
@@ -28,11 +29,11 @@ no_index:
 requires:
   Class::Utils: 0.03
   Config::Utils: 0.03
-  Error::Pure: 0.08
+  Error::Pure: 0.09
   Readonly: 0
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Config-Dot-Array
   homepage: https://github.com/tupinek/Config-Dot-Array
   license: http://opensource.org/licenses/bsd-license.php
   repository: git://github.com/tupinek/Config-Dot-Array
-version: 0.01
+version: 0.02

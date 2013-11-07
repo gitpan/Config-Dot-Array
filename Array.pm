@@ -15,7 +15,7 @@ use Readonly;
 Readonly::Scalar my $EMPTY_STR => q{};
 
 # Version.
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 # Constructor.
 sub new {
@@ -192,13 +192,13 @@ Config::Dot::Array - Module for simple configure file parsing with arrays.
 
 =over 8
 
-=item B<new(%params)>
+=item C<new(%params)>
 
  Constructor.
 
 =over 8
 
-=item * B<callback>
+=item * C<callback>
 
  Callback code for adding parameter.
  Callback arguments are:
@@ -206,29 +206,29 @@ Config::Dot::Array - Module for simple configure file parsing with arrays.
  $value - Key value.
  Default is undef.
 
-=item * B<config>
+=item * C<config>
 
  Reference to hash structure with default config data.
  This is hash of hashes or arrays structure.
  Default value is reference to blank hash.
 
-=item * B<set_conflicts>
+=item * C<set_conflicts>
 
  Set conflicts detection as error.
  Default value is 1.
 
 =back
 
-=item B<parse($string_or_array_ref)>
+=item C<parse($string_or_array_ref)>
 
 Parse string $string_or_array_ref or reference to array 
 $string_or_array_ref and returns hash structure.
 
-=item B<reset()>
+=item C<reset()>
 
 Reset content in class (config parameter).
 
-=item B<serialize()>
+=item C<serialize()>
 
 Serialize 'config' hash to output.
 
@@ -254,15 +254,16 @@ Serialize 'config' hash to output.
 
 =head1 ERRORS
 
- Mine:
+ new():
          Bad 'config' parameter.
          Parameter 'callback' isn't code reference.
+         From Class::Utils::set_params():
+                 Unknown parameter '%s'.
 
- From Config::Utils::conflict():
-         Conflict in '%s'.
-
- From Class::Utils::set_params():
-         Unknown parameter '%s'.
+ parse():
+         Bad key '%s' in string '%s' at line '%s'.
+         From Config::Utils::hash_array():
+                 Conflict in '%s'.
 
 =head1 EXAMPLE1
 
@@ -398,6 +399,6 @@ BSD license.
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut

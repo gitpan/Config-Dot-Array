@@ -7,9 +7,10 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Module for simple configure file parsing with arrays.';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'Config-Dot-Array';
+readme_from 'Array.pm';
 requires 'Class::Utils' => 0.03;
 requires 'Config::Utils' => 0.03;
 requires 'Error::Pure' => 0.09;
@@ -27,7 +28,7 @@ test_requires 'Test::NoWarnings' => 0;
 test_requires 'Test::Pod' => 0;
 test_requires 'Test::Pod::Coverage' => 0;
 tests_recursive;
-version '0.03';
+version '0.04';
 
 # Run.
 WriteAll();
